@@ -1,6 +1,29 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "../components/Header/page";
+
+import localFont from "next/font/local";
+
+const nexonGothic = localFont({
+  src: [
+    {
+      path: "../assets/fonts/NEXON Lv1 Gothic Low OTF Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/NEXON Lv1 Gothic Low OTF.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/NEXON Lv1 Gothic Low OTF Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--font-nexon-gothic",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`geistSans`}>
-        <Header />
-        <main>{children}</main>
-      </body>
+    <html lang="ko">
+      <body className={`antialiased ${nexonGothic.className}`}>{children}</body>
     </html>
   );
 }
