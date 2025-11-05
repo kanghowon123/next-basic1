@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import logoImage from "../../../../assets/images/logo.png";
-import logoWhiteImg from "../../../../assets/images/logo-w.png";
+import logoImage from "@/assets/images/logo.png";
+import logoWhiteImg from "@/assets/images/logo-w.png";
 
 const menuList = [
   {
@@ -88,7 +88,7 @@ export default function Header() {
   return (
     <header
       className={`top-bar ${
-        isScrolled ? "bg-[#ffffff80]" : ""
+        isScrolled ? "bg-[#ffffffe6]" : ""
       } fixed w-full z-100`}
     >
       <div className="con max-w-(--site-width) mx-auto px-[5px] h-20 flex">
