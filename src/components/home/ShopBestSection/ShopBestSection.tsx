@@ -9,12 +9,21 @@ export default function ShopBestSection() {
     <section className="bg-[#e5e7eb] py-[50px]">
       <div className="shop-box max-w-(--site-width) mx-auto">
         <div className="flex flex-col items-center">
-          <Image
-            src={IMAGES.shopTitleImage}
-            alt="shop best 이미지"
-            style={{ width: "268px", height: "auto" }}
-          ></Image>
-          <p className="text-[36px] font-bold text-[#404040]">
+          <div>
+            <Image
+              src={IMAGES.shopTitleImage}
+              alt="shop best 이미지"
+              className="w-[268px] md:block hidden"
+            ></Image>
+          </div>
+          <div>
+            <Image
+              src={IMAGES.shopMTitleImage}
+              alt="모바일 이미지"
+              className="w-5 md:hidden block my-2"
+            />
+          </div>
+          <p className="md:text-[36px] text-[20px] font-bold text-[#404040]">
             인기 데이터를 한눈에!
           </p>
         </div>

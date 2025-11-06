@@ -8,10 +8,10 @@ export default function ReviewTop() {
   return (
     <div>
       <div className="text-center">
-        <p className="text-[20px]">
+        <p className="md:text-[20px] text-[14px]">
           앨리스 모바일은 차근차근 신뢰를 쌓아가고 있어요
         </p>
-        <p className="text-[36px] font-bold text-[#404040] py-2.5 pb-10">
+        <p className="md:text-[36px] text-[20px] font-bold text-[#404040] py-2.5 pb-10">
           5만명의 사람들이 앨리스를 찾았어요
         </p>
       </div>

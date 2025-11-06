@@ -9,14 +9,14 @@ export default function ReviewBottom() {
   return (
     <>
       <div className="text-center pt-[150px] pb-15">
-        <p className="text-[20px] text-[#404040]">
+        <p className="md:text-[20px] text-[14px] text-[#404040]">
           친절한 앨리스가 토끼굴에서 기다리고 있어요
         </p>
-        <p className="font-bold text-[36px] text-[#404040]">
+        <p className="font-bold md:text-[36px] text-[20px] text-[#404040]">
           도움이 필요하신가요?
         </p>
       </div>
-      <div className="grid grid-cols-3 pb-[100px]">
+      <div className="md:grid hidden grid-cols-3 pb-[100px]">
         <div>
           <div className="pb-2">
             <Image
@@ -99,6 +99,47 @@ export default function ReviewBottom() {
             </p>
           </div>
           <p className="text-[#404040] text-[36px] pt-15 pl-2">02 336 4190</p>
+        </div>
+      </div>
+      <div className="md:hidden block">
+        <div className="grid grid-cols-2 px-[15px]">
+          <div>
+            <div>
+              <Image
+                src={IMAGES.mQuestion}
+                alt="자주 묻는 질문 이미지"
+                className="w-auto h-5"
+              />
+            </div>
+            <p className="font-bold my-2.5">자주 묻는 질문</p>
+            <Link href="#" className="text-[14px]">
+              바로가기 &gt;
+            </Link>
+          </div>
+          <div>
+            <div>
+              <Image
+                src={IMAGES.mIquiry}
+                alt="자주 묻는 질문 이미지"
+                className="w-auto h-5"
+              />
+            </div>
+            <p className="font-bold my-2.5">카카오톡 문의</p>
+            <Link href="#" className="text-[14px]">
+              바로가기 &gt;
+            </Link>
+          </div>
+        </div>
+        <div className="px-[15px] py-[30px] ">
+          <div className="px-5 py-[30px] bg-[#eeeeee66] rounded-2xl">
+            <p className="font-bold pb-5">상담원 연결</p>
+            <p className="text-[14px] pb-1">평일 9:00 ~ 18:00</p>
+            <p className="text-[14px] text-[#a6a6a6] pb-5">
+              점심 13:00 ~ 14:00 주말 및 공휴일 휴무
+            </p>
+            <hr className="text-[#ddd]" />
+            <p className="text-[20px] pt-5">02 336 4190</p>
+          </div>
         </div>
       </div>
     </>

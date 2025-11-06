@@ -79,6 +79,7 @@ interface FooterSection {
   id: string;
   title: string;
   titleEn: string;
+  order: string;
   links?: { text: string; url: string }[];
   info?: { label: string; sub?: string; holiday: string }[];
   methods?: MethodItem[];

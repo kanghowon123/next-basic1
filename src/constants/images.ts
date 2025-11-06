@@ -4,6 +4,7 @@ import select2Image from "../assets/images/select2.png";
 import select3Image from "../assets/images/select3.png";
 import selectMImage from "../assets/images/select-m.png";
 import shopTitleImage from "../assets/images/shop-title.png";
+import shopMTitleImage from "@/assets/images/plus.png";
 import shopSubTitleImage from "../assets/images/shop-sub-title.png";
 import wifiImage from "../assets/images/wifi.png";
 import qualityImage from "../assets/images/shop-ko-quality.png";
@@ -26,6 +27,8 @@ import v1c from "@/assets/images/v1-3.png";
 import v1d from "@/assets/images/v1-4.png";
 import v2 from "@/assets/images/v2.png";
 import v3 from "@/assets/images/v3.png";
+import mQuestion from "@/assets/images/m-question.png";
+import mIquiry from "@/assets/images/m-inquiry.png";
 import pingImage from "@/assets/images/ping.png";
 import inipayImage from "@/assets/images/inipay.png";
 import kakaoImage from "@/assets/images/kakao.png";
@@ -37,6 +40,7 @@ export const IMAGES = {
   select3Image,
   selectMImage,
   shopTitleImage,
+  shopMTitleImage,
   shopSubTitleImage,
   wifiImage,
   qualityImage,
@@ -59,6 +63,8 @@ export const IMAGES = {
   v1d,
   v2,
   v3,
+  mQuestion,
+  mIquiry,
   pingImage,
   inipayImage,
   kakaoImage,

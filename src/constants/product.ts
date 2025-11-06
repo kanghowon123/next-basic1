@@ -174,6 +174,7 @@ export const FOOTER_DATA: FooterData = {
       id: "shop",
       title: "어떤 데이터를 찾나요?",
       titleEn: "Shop",
+      order: "order-1 md:order-1",
       links: [
         { text: "국내 포켓와이파이", url: "#" },
         { text: "국내 유심/이심", url: "#" },
@@ -184,6 +185,7 @@ export const FOOTER_DATA: FooterData = {
       id: "customer-service",
       title: "도움이 필요하신가요?",
       titleEn: "Customer Service",
+      order: "order-3 md:order-2",
       info: [
         {
           label: "운영시간 09:00 - 18:00",
@@ -196,6 +198,7 @@ export const FOOTER_DATA: FooterData = {
       id: "methods",
       title: "",
       titleEn: "",
+      order: "order-4 md:order-3",
       methods: [
         {
           messenger: {
@@ -217,6 +220,7 @@ export const FOOTER_DATA: FooterData = {
       id: "information",
       title: "궁금한 내용이 있으신가요?",
       titleEn: "Information",
+      order: "order-2 md:order-4",
       links: [
         { text: "자주 묻는 질문", url: "#" },
         { text: "찾아오는 길", url: "#" },

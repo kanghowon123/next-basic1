@@ -10,11 +10,10 @@ export default function InternationalWifiSection() {
         <Image
           src={IMAGES.shopSubTitle2Image}
           alt="wonderFi 해외 이미지"
-          className="my-5"
-          style={{ width: "auto", height: "36px" }}
+          className="my-5 h-9 w-auto md:block hidden"
         />
       </div>
-      <div className="card flex gap-5">
+      <div className="card flex md:flex-row flex-col md:gap-5 gap-2 md:px-0 px-[15px]">
         <WonderFiMainProductCard />
         <WonderFiSubProductCard />
       </div>

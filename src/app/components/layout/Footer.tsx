@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
       <div className="bg-[#faf6ff]">
         <div className="max-w-(--site-width) mx-auto py-10">
-          <div>
+          <div className="md:mx-0 mx-[15px]">
             <p className="text-[20px] my-2.5">{FOOTER_DATA.company.name}</p>
             <div className="flex items-center">
               <div className="pr-2">
@@ -23,25 +23,25 @@ export default function Footer() {
                 {FOOTER_DATA.company.address}
                 <Link
                   href="#"
-                  className="underline text-[14px] text-[#8a8a8a] pl-2"
+                  className="underline text-[14px] text-[#8a8a8a] pl-2 hidden md:block"
                 >
                   {FOOTER_DATA.company.mapLink}
                 </Link>
               </p>
             </div>
           </div>
-          <div>
-            <ul className="flex pt-10 justify-between">
+          <div className="md:mx-0 mx-[15px]">
+            <ul className="grid md:grid-cols-4 grid-cols-2 pt-10 gap-10 md:gap-0 ">
               {FOOTER_DATA.sections.map((list) => (
-                <li key={list.id}>
+                <li key={list.id} className={`${list.order}`}>
                   <div className="flex flex-col gap-1">
                     <p className="text-[14px] text-[#beb2c2]">
                       {list.titleEn || "\u00a0"}
                     </p>
-                    <p>{list.title || "\u00a0"}</p>
+                    <p className="hidden md:block">{list.title || "\u00a0"}</p>
                   </div>
                   {list.links && (
-                    <div className="py-5 flex flex-col gap-1.5">
+                    <div className="py-2 md:py-5 flex flex-col gap-1.5">
                       {list.links?.map((link) => (
                         <p
                           key={link.text}
@@ -53,7 +53,7 @@ export default function Footer() {
                     </div>
                   )}
                   {list.info && (
-                    <div className="py-5 text-[14px] text-[#404040]">
+                    <div className="py-2 md:py-5 text-[14px] text-[#404040]">
                       {list.info.map((i) => (
                         <div key={i.label} className="flex flex-col gap-1.5">
                           <p>{i.label}</p>
@@ -64,26 +64,47 @@ export default function Footer() {
                     </div>
                   )}
                   {list.methods && (
-                    <div className="py-5">
+                    <div className="py-2 md:py-5">
                       {list.methods?.map((method) => (
-                        <div
-                          key={method.messenger?.email}
-                          className="flex gap-5"
-                        >
-                          <div className="flex flex-col gap-1.5 text-[14px] text-[#404040]">
-                            <p>{method.messenger?.email}</p>
-                            <p className="pb-[27px]">
-                              {method.messenger?.kakao}
-                            </p>
-                            <p>{method.messenger?.phone}</p>
+                        <div key={method.messenger?.email}>
+                          {/* pc */}
+                          <div className="md:flex hidden gap-5 ">
+                            <div className="flex flex-col gap-1.5 text-[14px] text-[#404040]">
+                              <p>{method.messenger?.email}</p>
+                              <p className="pb-[27px]">
+                                {method.messenger?.kakao}
+                              </p>
+                              <p>{method.messenger?.phone}</p>
+                            </div>
+                            <div className="flex flex-col gap-1.5 text-[14px] text-[#404040]">
+                              <Link href="#">{method.contact?.email}</Link>
+                              <p>{method.contact?.kakaoKo}</p>
+                              <p>{method.contact?.kakaoInt}</p>
+                              <p className="text-black text-[24px]">
+                                {method.contact?.phone}
+                              </p>
+                            </div>
                           </div>
-                          <div className="flex flex-col gap-1.5 text-[14px] text-[#404040]">
-                            <Link href="#">{method.contact?.email}</Link>
-                            <p>{method.contact?.kakaoKo}</p>
-                            <p>{method.contact?.kakaoInt}</p>
-                            <p className="text-black text-[24px]">
-                              {method.contact?.phone}
-                            </p>
+                          {/* // 모바일 */}
+                          <div
+                            key={method.messenger?.email}
+                            className=" gap-5 block md:hidden text-[14px] text-[#404040]"
+                          >
+                            <div className="text-[14px]">
+                              <p className="pb-1">{method.messenger?.kakao}</p>
+                              <p>{method.contact?.kakaoKo}</p>
+                              <p className="pb-5">{method.contact?.kakaoInt}</p>
+                            </div>
+                            <div className="text-[14px]">
+                              <p className="pb-1">{method.messenger?.email}</p>
+                              <p className="pb-5">{method.contact?.email}</p>
+                            </div>
+                            <div className="text-[14px]">
+                              <p className="pb-1">{method.messenger?.phone}</p>
+                              <p className="text-[20px]">
+                                {method.contact?.phone}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       ))}
@@ -96,8 +117,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-(--site-width) mx-auto py-[30px]">
-        <div className="flex flex-col gap-2 pb-5]">
+      <div className="max-w-(--site-width) mx-auto py-[30px] ">
+        <div className="flex flex-col gap-2 pb-5] md:px-0 px-[15px] ">
           <p className="text-[8px] text-[#5a5a5a]">
             (주)해리 | 대표이사 : 여혁종 | 개인정보책임관리자 : 임규원 |
             사업자등록번호 : 623-86-00369 | 사업장소재지 : 서울특별시 마포구
