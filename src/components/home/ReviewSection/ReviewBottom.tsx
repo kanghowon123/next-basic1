@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { IMAGES } from "@/constants/images";
-import { REVIEW_QUESTION_ITEMS } from "@/constants/product";
+import { REVIEW_QUESTION_ITEMS } from "@/constants/reviews";
 import Button from "@/components/common/Button/Button";
 
 export default function ReviewBottom() {
@@ -38,7 +38,7 @@ export default function ReviewBottom() {
                 <li key={item.id} className="p-2 flex flex-col items-center">
                   <div>
                     <Image
-                      src={IMAGES.v1a}
+                      src={item.image}
                       alt={item.text}
                       className="w-[60px] h-[60px]"
                     />

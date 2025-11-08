@@ -24,32 +24,6 @@ export type WonderFiItem = {
   price: string;
 };
 
-export type ReviewLeftItem = {
-  id: number;
-  background: string;
-  color: string;
-  title: string;
-  content1: string;
-  content2: string;
-  content3: string;
-  content4?: string | null;
-};
-
-export type ReviewRightItem = {
-  id: number;
-  background: string;
-  title: string;
-  content1: string;
-  content2: string;
-  content3: string;
-};
-
-export type ReviewQuestionItem = {
-  id: number;
-  image: any;
-  text: string;
-};
-
 interface FooterCompany {
   name: string;
   image: any;

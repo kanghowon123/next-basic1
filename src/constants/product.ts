@@ -3,11 +3,8 @@ import {
   SelectItems,
   SubCardItems,
   WonderFiItem,
-  ReviewLeftItem,
-  ReviewRightItem,
-  ReviewQuestionItem,
   FooterData,
-} from "@/types/priduct.types";
+} from "@/types/product.types";
 
 export const SELECT_ITEMS: SelectItems[] = [
   {
@@ -85,80 +82,6 @@ export const WONDERFI_ITEMS: WonderFiItem[] = [
     title: "베트남 원더파이",
     date: "완전 무제한",
     price: "일 3,900원",
-  },
-];
-
-export const REVIEW_LEFT_ITEMS: ReviewLeftItem[] = [
-  {
-    id: 1,
-    background: "bg-[#cd4cff]",
-    color: "text-white",
-    title: "하트여왕",
-    content1: "삶의 질이 달라졌어요!",
-    content2: "인터넷 설치하긴 좀 그렇고",
-    content3: "와이파이 쓰러면 도서관까지 가야해서",
-    content4: "불편했는데 집에서 되니까 완전 좋아요!",
-  },
-  {
-    id: 2,
-    background: "bg-[#434343]",
-    color: "text-white",
-    title: "모자장수",
-    content1: "삶의 질이 달라졌어요!",
-    content2: "인터넷 설치하긴 좀 그렇고",
-    content3: "와이파이 쓰러면 도서관까지 가야해서",
-    content4: "불편했는데 집에서 되니까 완전 좋아요!",
-  },
-  {
-    id: 3,
-    background: "bg-[#efefef]",
-    color: "text-[#404040]",
-    title: "험프티",
-    content1: "전화 문의 등 서비스 응대도 좋았고",
-    content2: "제품 여러 대 세 달 동안 사용했는데",
-    content3: "만족도 높습니다.",
-  },
-];
-
-export const REVIEW_RIGHT_ITEMS: ReviewRightItem[] = [
-  {
-    id: 1,
-    background: "bg-[#efefef]",
-    title: "일본 원더파이",
-    content1: "속도도 전혀 느림없이 잘상용했고,",
-    content2: "포켓와이파이 타 브랜드에 비해",
-    content3: "너무 가벼워서 여행하며 편했어요!",
-  },
-  {
-    id: 2,
-    background: "bg-[#00e3af]",
-    title: "미국 원더파이",
-    content1: "너무 잘썻어요.",
-    content2: "미국에서 아주 잘터졌습니다.",
-    content3: "만족합니다!",
-  },
-];
-
-export const REVIEW_QUESTION_ITEMS: ReviewQuestionItem[] = [
-  {
-    id: 1,
-    image: IMAGES.v1a,
-    text: "배송·수령",
-  },
-  {
-    id: 2,
-    image: IMAGES.v1b,
-    text: "이용·반납",
-  },
-  {
-    id: 3,
-    image: IMAGES.v1c,
-    text: "취소·환불",
-  },
-  {
-    id: 4,
-    image: IMAGES.v1d,
-    text: "제휴문의",
   },
 ];
 

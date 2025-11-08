@@ -32,6 +32,21 @@ import mIquiry from "@/assets/images/m-inquiry.png";
 import pingImage from "@/assets/images/ping.png";
 import inipayImage from "@/assets/images/inipay.png";
 import kakaoImage from "@/assets/images/kakao.png";
+// wifi
+import bestDealImage from "@/assets/images/wifi-images/best-deal.png";
+import collectionImage from "@/assets/images/wifi-images/collection.png";
+import list1Iamge from "@/assets/images/wifi-images/list1.webp";
+import list2Iamge from "@/assets/images/wifi-images/list2.webp";
+import list3Iamge from "@/assets/images/wifi-images/list3.webp";
+import list4Iamge from "@/assets/images/wifi-images/list4.webp";
+import list5Iamge from "@/assets/images/wifi-images/list5.webp";
+import list6Iamge from "@/assets/images/wifi-images/list6.webp";
+import list7Iamge from "@/assets/images/wifi-images/list7.webp";
+import list8Iamge from "@/assets/images/wifi-images/list8.webp";
+import list9Iamge from "@/assets/images/wifi-images/list9.webp";
+import saleIamge from "@/assets/images/wifi-images/sale.png";
+import mdImage from "@/assets/images/wifi-images/md.png";
+import bestImage from "@/assets/images/wifi-images/best.png";
 
 export const IMAGES = {
   backgroundImage,
@@ -68,4 +83,18 @@ export const IMAGES = {
   pingImage,
   inipayImage,
   kakaoImage,
+  bestDealImage,
+  collectionImage,
+  list1Iamge,
+  list2Iamge,
+  list3Iamge,
+  list4Iamge,
+  list5Iamge,
+  list6Iamge,
+  list7Iamge,
+  list8Iamge,
+  list9Iamge,
+  saleIamge,
+  mdImage,
+  bestImage,
 };

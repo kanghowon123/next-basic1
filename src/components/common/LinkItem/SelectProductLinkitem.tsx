@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 
-import { SelectItems } from "@/types/priduct.types";
+import { SelectItems } from "@/types/product.types";
 import Image from "next/image";
 import Link from "next/link";
 
