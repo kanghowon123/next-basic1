@@ -3,11 +3,11 @@ import { MenuList, AuthList } from "./types";
 export const MENU_LIST: MenuList[] = [
   {
     name: "임대방법",
-    href: "/wifiRental",
+    href: "/wifi-rental",
   },
   {
     name: "WiFi",
-    href: "wifi",
+    href: "/wifi",
   },
   {
     name: "HomeFi",

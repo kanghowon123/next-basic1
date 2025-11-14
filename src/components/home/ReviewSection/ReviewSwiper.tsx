@@ -5,39 +5,59 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { REVIEW_ITEMS } from "@/constants/reviews";
+import Image from "next/image";
+import { Autoplay, Pagination } from "swiper/modules";
+import { REVIEW_SWIPER_ITEMS } from "@/constants/reviews";
 export default function ReviewSwiper() {
   return (
-    <div className="max-w-[80%] mx-auto">
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {REVIEW_ITEMS.map((review) => (
-          <SwiperSlide key={review.id}>
-            <div
-              className={`p-5 rounded-lg ${review.bgColor} ${review.color} flex flex-col gap-2`}
-            >
-              <h3 className="font-bold text-lg">{review.title}</h3>
-              {review.content.split("\n").map((line, index) => (
-                <p key={index} className="text-sm leading-relaxed">
-                  {line}
-                </p>
-              ))}
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    // <div className="max-w-[80%] mx-auto">
+    //   <Swiper
+    //     loop={true}
+    //     centeredSlides={true}
+    //     autoplay={{
+    //       delay: 2500,
+    //       disableOnInteraction: false,
+    //     }}
+    //     pagination={{
+    //       clickable: true,
+    //       bulletActiveClass: "!w-[20px] !rounded-2xl",
+    //     }}
+    //     modules={[Autoplay, Pagination]}
+    //     className="mySwiper"
+    //   >
+    //     {REVIEW_SWIPER_ITEMS.map((item) => (
+    //       <SwiperSlide key={item.id}>
+    //         <div>
+    //           <Image src={item.image} alt="리뷰 이미지" />
+    //         </div>
+    //       </SwiperSlide>
+    //     ))}
+    //   </Swiper>
+    // </div>
+    <Swiper
+      loop={true}
+      spaceBetween={100}
+      centeredSlides={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+        bulletClass: "swiper-pagination-bullet duration-300 transition-all",
+        bulletActiveClass:
+          "swiper-pagination-bullet-active !bg-[#cecece] !w-[20px] !rounded-[10px]",
+      }}
+      modules={[Autoplay, Pagination]}
+      className="mySwiper"
+    >
+      {REVIEW_SWIPER_ITEMS.map((item) => (
+        <SwiperSlide>
+          <div className="p-10 w-full">
+            <Image src={item.image} alt="리뷰 이미지" className="w-full" />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }

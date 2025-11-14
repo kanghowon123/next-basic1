@@ -6,9 +6,49 @@
   --site-width: 1280px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --breakpoint-*: initial;
+
+  /* 기존 브레이크포인트 재정의 */
+  --breakpoint-sm: 640px; /* 기본값 유지 또는 변경 */
+  --breakpoint-md: 768px; /* 기본값 유지 또는 변경 */
+  --breakpoint-lg: 1024px; /* 기본값 유지 또는 변경 */
+  --breakpoint-xl: 1280px; /* 기본값 유지 또는 변경 */
+  --breakpoint-2xl: 1536px; /* 기본값 유지 또는 변경 */
+
+  --breakpoint-tablet: 772px;
+  --breakpoint-laptop: 992px;
+  --breakpoint-desktop: 1280px;
+}
+
+/* user-menu-box */
+.user-menu-box {
+  li:nth-child(2) {
+    a {
+      position: relative;
+      padding-right: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0.5px;
+        height: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  li:last-child {
+    a {
+      padding-left: 20px;
+    }
   }
 }

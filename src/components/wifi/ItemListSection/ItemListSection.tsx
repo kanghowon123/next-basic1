@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { WIFI_LIST } from "@/constants/wifi";
-import Link from "next/link";
+import { styles } from "./ItemListSection.styles";
 
 export default function ItemListSection() {
   return (
-    <div className="w-full mx-auto flex flex-wrap justify-between pb-30">
+    <div className={styles.itemBox}>
       {WIFI_LIST.map((list) => (
         <div key={list.id} className="pt-10 ">
           <Link href={`/wifi/${list.id}`}>
@@ -13,11 +14,11 @@ export default function ItemListSection() {
               <Image
                 src={list.mainImage}
                 alt={list.title}
-                className="max-w-[303px] transition duration-500 hover:opacity-50"
+                className="w-full h-auto transition duration-500 hover:opacity-50"
               />
             </div>
-            <p className="font-bold leading-loose pt-4">{list.title}</p>
-            <div className="flex items-end gap-2 leading-loose">
+            <p className={styles.itemTitle}>{list.title}</p>
+            <div className={styles.itemPriceBox}>
               <p className="font-bold">{list.price}</p>
               <p className="text-[11px] text-[#40404080] line-through">
                 {list.salePrice}

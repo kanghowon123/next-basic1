@@ -1,15 +1,29 @@
-import { HeaderCommonProps } from "./types";
+"use client";
 
-import { AUTH_LIST } from "./constants";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
+import { AUTH_LIST, MENU_LIST } from "./constants";
+import { HeaderCommonProps } from "./types";
+
 export default function AuthNav({ isScrolled }: HeaderCommonProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
   return (
     <div className="ml-auto">
       <ul
         className={`auth-box ${
           isScrolled ? "text-black" : "text-white"
-        } flex  md:gap-5 gap-2 text-[14px] font-light h-full items-center`}
+        } flex relative md:gap-5 gap-2 text-[14px] font-light h-full items-center`}
       >
         {AUTH_LIST.map((auth) => (
           <li
@@ -43,7 +57,7 @@ export default function AuthNav({ isScrolled }: HeaderCommonProps) {
           </Link>
         </li>
         <li className="md:hidden block md:pr-0 pr-5">
-          <button className="block cursor-pointer">
+          <button className="block cursor-pointer" onClick={toggleMenu}>
             <svg
               className="w-7 h-7"
               xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +74,50 @@ export default function AuthNav({ isScrolled }: HeaderCommonProps) {
             </svg>
           </button>
         </li>
+      </ul>
+      {/* 모바일 메뉴 */}
+
+      <ul
+        className={`absolute top-0 right-0 pt-20 h-screen bg-[#ffffff] duration-300 ${
+          isMenuOpen ? "w-[300px]" : "w-0"
+        }`}
+      >
+        <button
+          className={`block absolute right-80 top-8 cursor-pointer ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+          onClick={toggleMenu}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        {MENU_LIST.map((list) => {
+          const isActive = pathname === list.href;
+          return (
+            <li key={list.name}>
+              <Link
+                href={list.href}
+                className={`text-[#4e4e4ee6] py-3.5 px-5 flex ${
+                  isActive ? "font-bold" : "font-normal"
+                }`}
+              >
+                {list.name}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

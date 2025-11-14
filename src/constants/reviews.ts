@@ -43,6 +43,29 @@ export const REVIEW_ITEMS: ReviewItem[] = [
   },
 ];
 
+export const REVIEW_SWIPER_ITEMS = [
+  {
+    id: 1,
+    image: IMAGES.reviewSwiper1,
+  },
+  {
+    id: 2,
+    image: IMAGES.reviewSwiper2,
+  },
+  {
+    id: 3,
+    image: IMAGES.reviewSwiper3,
+  },
+  {
+    id: 4,
+    image: IMAGES.reviewSwiper4,
+  },
+  {
+    id: 5,
+    image: IMAGES.reviewSwiper5,
+  },
+];
+
 export const REVIEW_QUESTION_ITEMS: ReviewQuestionItem[] = [
   {
     id: 1,

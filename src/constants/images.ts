@@ -20,6 +20,13 @@ import shopInit2Image from "../assets/images/shop-int2.png";
 import shopInit3Image from "../assets/images/shop-int3.png";
 import reviewBackgroundImage from "@/assets/images/back2.png";
 import airplaneImage from "@/assets/images/airplane.png";
+
+import reviewSwiper1 from "@/assets/images/review01.png";
+import reviewSwiper2 from "@/assets/images/review02.png";
+import reviewSwiper3 from "@/assets/images/review03.png";
+import reviewSwiper4 from "@/assets/images/review04.png";
+import reviewSwiper5 from "@/assets/images/review05.png";
+
 import v1 from "@/assets/images/v1.png";
 import v1a from "@/assets/images/v1-1.png";
 import v1b from "@/assets/images/v1-2.png";
@@ -71,6 +78,11 @@ export const IMAGES = {
   shopInit3Image,
   reviewBackgroundImage,
   airplaneImage,
+  reviewSwiper1,
+  reviewSwiper2,
+  reviewSwiper3,
+  reviewSwiper4,
+  reviewSwiper5,
   v1,
   v1a,
   v1b,

@@ -7,7 +7,7 @@ import { IMAGES } from "@/constants/images";
 export default function ReviewSection() {
   return (
     <div
-      className="review-box"
+      className="review-box bg-gray-50"
       style={{
         backgroundImage: `url(${IMAGES.reviewBackgroundImage.src})`,
         backgroundSize: "cover",

@@ -12,6 +12,8 @@
 
 ## footer 추가
 
+## wifi 라우팅 추가
+
 ## 새로 알게 된 점
 
 1. 배열에도 타입을 줘야함
@@ -74,20 +76,16 @@ appapp
 - 정적 경로는 폴더 안 page.tsx
 - 동적 경로는 [변수명] 폴더 안 page.tsx
 
-## 궁금한 점
+7. usePathname (현재 브라우저 주소창의 경로부분을 문자열로 반환함)
 
-1. itemListSection.tsx 에서 3씩 보여야 하는데 gird grid-3 하면 우측 끝에 딱 안붙음,
-   flex flex-wrap justify-between로 붙이긴함 보통 어떤 방법을 사용하는지 궁금함
+- https:example.com/ -> '/'
+- https:example.com/wifi -> '/wifi'
+
+## 궁금한 점
 
 ## 수업 이후 수정 사항
 
-1. 리뷰섹션 반응형 슬라이드(swiper) 적용 (디테일 적인 부분은 일단 패스함)
-
-2. app/page.tsx에 있던 헤더 푸터 app/layout.tsx로 이동 함으로 써 페이지 라우팅 시 보여지게 수정
-
-3. wifiPage 제작
+1. 이전 수업에 배운내용 적용
+2. 모바일 화면에서 햄버거바 클릭시 메뉴생성
 
 ## 수업 진행 요청사항
-
-1. 라우팅 관련 한 수업으로 하면 좋을거 같음
-2. 시간 남으면 슬라이드 관련 간단한 커스텀도 해보면 좋을거 같음
